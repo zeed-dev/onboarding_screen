@@ -106,7 +106,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   contentState != 0
-                      ? GestureDetector(
+                      ? InkWell(
                           onTap: () {
                             print("back");
                             setState(() {
@@ -116,9 +116,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               print(contentState);
                             });
                           },
-                          child: Icon(
-                            Icons.arrow_back_ios,
-                            size: 18,
+                          child: SizedBox(
+                            height: 20,
+                            width: 20,
+                            child: Icon(
+                              Icons.arrow_back_ios,
+                              size: 18,
+                            ),
                           ),
                         )
                       : SizedBox(),
